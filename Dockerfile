@@ -4,4 +4,4 @@ RUN apt-get update
 RUN apt-get install nginx -y
 RUN apt-get install tzdata -y
 RUN apt-get clean
-CMD ["nginxctl","-D","FOREGROUND"]
+CMD ["nginx", "-g", "daemon off;"]
